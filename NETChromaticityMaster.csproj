@@ -8,4 +8,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ChromaticityDotNet" Version="1.0.1.11" />
+  </ItemGroup>
+
 </Project>
