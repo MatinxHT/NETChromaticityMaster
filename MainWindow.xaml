@@ -3,10 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:NETChromaticityMaster"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="ChromaticityMaster" Height="450" Width="800"
+        ResizeMode="CanResize">
+    <Window.Resources>
+        <ImageBrush x:Key="CIE1931BackgroundBrush" ImageSource="pack://application:,,,/NETChromaticityMaster;component/pic/1931plotview.png"/>
+        <!--ImageBrush x:Key="CIE1976BackgroundBrush" ImageSource="pack://application:,,,/LEDChromaticityAnalyser;component/picres/1976plotview.png" /> -->
+    </Window.Resources>
+    <DockPanel>
+        <DockPanel Width="380" DockPanel.Dock="Left">
+            
+        </DockPanel>
+        <DockPanel Width="420" DockPanel.Dock="Left">
+            <GroupBox Header="View">
+                <oxy:PlotView x:Name="CIE1931Chart" Model="{Binding CIE1931Model}" Width="390" Height="270">
+                    <oxy:PlotView.Background >
+                        <StaticResource ResourceKey="CIE1931BackgroundBrush" />
+                    </oxy:PlotView.Background>
+                </oxy:PlotView>
+            </GroupBox>
+        </DockPanel>
+    </DockPanel>
 </Window>

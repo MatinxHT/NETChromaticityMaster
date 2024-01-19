@@ -9,7 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="pic\1931plotview.png" />
+    <None Remove="pic\1976plotview.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ChromaticityDotNet" Version="1.0.1.11" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pic\1931plotview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="pic\1976plotview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
