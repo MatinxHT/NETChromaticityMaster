@@ -25,15 +25,15 @@ namespace NETChromaticityMaster
         {
             InitializeComponent();
 
-            Plot1931();
+            //Plot1931();
         }
 
-        private void Plot1931()
-        {
+        //private void Plot1931()
+        //{
 
-            _1931viewModel = new CIE1931ViewModel(ScatterPointValueStructList);
-            CIE1931Chart.DataContext = _1931viewModel;
+        //    _1931viewModel = new CIE1931ViewModel(ScatterPointValueStructList);
+        //    CIE1931Chart.DataContext = _1931viewModel;
 
-        }
+        //}
     }
 }

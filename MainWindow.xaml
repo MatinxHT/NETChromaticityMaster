@@ -7,24 +7,74 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:local="clr-namespace:NETChromaticityMaster"
         mc:Ignorable="d"
-        Title="ChromaticityMaster" Height="450" Width="800"
-        ResizeMode="CanResize">
+        WindowStyle="None"
+        Title="ChromaticityMaster" 
+        Height="800" Width="1380"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="NoResize">
+
     <Window.Resources>
         <ImageBrush x:Key="CIE1931BackgroundBrush" ImageSource="pack://application:,,,/NETChromaticityMaster;component/pic/1931plotview.png"/>
         <!--ImageBrush x:Key="CIE1976BackgroundBrush" ImageSource="pack://application:,,,/LEDChromaticityAnalyser;component/picres/1976plotview.png" /> -->
     </Window.Resources>
-    <DockPanel>
-        <DockPanel Width="380" DockPanel.Dock="Left">
-            
-        </DockPanel>
-        <DockPanel Width="420" DockPanel.Dock="Left">
-            <GroupBox Header="View">
-                <oxy:PlotView x:Name="CIE1931Chart" Model="{Binding CIE1931Model}" Width="390" Height="270">
-                    <oxy:PlotView.Background >
-                        <StaticResource ResourceKey="CIE1931BackgroundBrush" />
-                    </oxy:PlotView.Background>
-                </oxy:PlotView>
-            </GroupBox>
-        </DockPanel>
-    </DockPanel>
+
+    <Border Background="#40407A" 
+            CornerRadius="35"
+            >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="345"  />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+
+            <TextBlock 
+                    Text="NETChromaticityMaster"
+                    FontSize="30"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Foreground="White"
+                    />
+
+
+            <StackPanel
+                Grid.Column="0"
+                Grid.Row="1"
+                >
+                <Button Content="Home" 
+                        FontSize="25"
+                        Height="45"
+                        Width="220"
+                        Foreground="White"
+                        Background="Transparent"
+                        Margin="0,20,0,20"
+                        />
+                
+                <Button Content="Serch Color" 
+        FontSize="25"
+        Height="45"
+        Width="220"
+        Foreground="White"
+        Background="Transparent"
+        Margin="0,20,0,20"
+        />
+
+
+            </StackPanel>
+
+            <Grid 
+                Grid.Row="1" Grid.Column="1"
+                Background="#2c2c54"
+                >
+                
+            </Grid>
+        </Grid>
+    </Border>
+
 </Window>
